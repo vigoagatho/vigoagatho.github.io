@@ -15,32 +15,84 @@ section {
   padding-top: 5rem;
 }
 
+/* CSS yang sudah ada (untuk desktop/layar besar) */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* Jarak antar tombol untuk layar besar */
+}
+
 .neo-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 140px;
-  height: 140px;
+  width: 140px; /* Lebar tombol untuk layar besar */
+  height: 140px; /* Tinggi tombol untuk layar besar */
   outline: 0 !important;
   cursor: pointer;
-  color: #d6a56d;
-  font-size: 15px;
   border: none;
   border-radius: 50%;
-  background:#d6a56d;
+  background: linear-gradient(145deg, #d6a56d, #bd8647);
   box-shadow: inset 20px 20px 60px #d6a56d, inset -20px -20px 60px #e28f31;
+  text-decoration: none;
 }
 
-.social-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
+.neo-button .fa {
+  font-size: 80px; /* Ukuran ikon untuk layar besar */
+  line-height: 1;
 }
 
-.neo-button:active {
-  border-radius: 50%;
-  background: #945003;
-  box-shadow: 28px 28px 57px #ebaf6b, -28px -28px 57px #fde0bf;
+/* --- Media Queries untuk Responsifitas --- */
+
+/* Untuk tablet dan layar menengah (misalnya, lebar maksimum 768px) */
+@media (max-width: 768px) {
+  .social-buttons {
+    gap: 20px; /* Sedikit kurangi jarak */
+  }
+
+  .neo-button {
+    width: 110px; /* Kecilkan tombol */
+    height: 110px;
+  }
+
+  .neo-button .fa {
+    font-size: 60px; /* Kecilkan ikon */
+  }
+}
+
+/* Untuk perangkat mobile (misalnya, lebar maksimum 576px) */
+@media (max-width: 576px) {
+  .social-buttons {
+    /* Jika terlalu sempit, bisa diatur agar tombolnya jadi satu kolom */
+    /* flex-direction: column; */
+    /* align-items: center; */ /* Pusatkan jika jadi satu kolom */
+    gap: 15px; /* Jarak lebih kecil lagi */
+  }
+
+  .neo-button {
+    width: 80px; /* Kecilkan tombol lebih lanjut */
+    height: 80px;
+  }
+
+  .neo-button .fa {
+    font-size: 40px; /* Kecilkan ikon lebih lanjut */
+  }
+}
+
+/* Optional: Untuk layar yang sangat kecil (misalnya, lebar maksimum 400px) */
+@media (max-width: 400px) {
+  .social-buttons {
+    gap: 10px;
+  }
+
+  .neo-button {
+    width: 70px;
+    height: 70px;
+  }
+
+  .neo-button .fa {
+    font-size: 35px;
+  }
 }
 
 .fa-facebook {
