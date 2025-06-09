@@ -1,0 +1,55 @@
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #d6a56d;
+}
+#about {
+  background-color: #fac990;
+}
+#projects {
+  background-color: #e99f5a;
+}
+#contacts {
+  background-color: #ffd3a0;
+}
+section {
+  padding-top: 5rem;
+}
+
+.neo-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  outline: 0 !important;
+  cursor: pointer;
+  color: #d6a56d;
+  font-size: 15px;
+  border: none;
+  border-radius: 50%;
+  background:#d6a56d;
+  box-shadow: inset 20px 20px 60px #d6a56d, inset -20px -20px 60px #e28f31;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.neo-button:active {
+  border-radius: 50%;
+  background: #945003;
+  box-shadow: 28px 28px 57px #ebaf6b, -28px -28px 57px #fde0bf;
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-youtube {
+  color: #cd201f;
+}
+.fa-instagram {
+  color: #f54aae;
+}
