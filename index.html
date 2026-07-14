@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2EHG0LQ9ZG"></script>
@@ -9,239 +9,302 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-2EHG0LQ9ZG");
     </script>
-    <!-- Required meta tags -->
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio | Vigo Agatho</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" />
-
-    <!-- FA Icons -->
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <!-- My CSS -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
     <link rel="stylesheet" href="style.css" />
-    <title>Portfolio | Vigo Agatho</title>
   </head>
   <body id="home">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" style="background-color: #1b1200">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Vigo Agatho</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contacts">Contacts</a>
-            </li>
-          </ul>
+    <!-- REC / status strip -->
+    <div class="rec-strip" aria-hidden="true">
+      <span class="rec-dot"></span>
+      <span class="rec-strip__text">REC — VIGO_AGATHO_PORTFOLIO.PROJ</span>
+      <span class="rec-strip__text rec-strip__text--right">SIS. INFORMASI · UNTAN · PONTIANAK</span>
+    </div>
+
+    <!-- Timeline Nav -->
+    <header class="timeline-nav">
+      <div class="timeline-nav__inner">
+        <a href="#home" class="timeline-nav__brand">
+          <span class="timeline-nav__brand-mark">VA</span>
+          <span class="timeline-nav__brand-name">Vigo Agatho</span>
+        </a>
+
+        <button class="timeline-nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+        <nav class="timeline-nav__track" id="navTrack">
+          <a href="#home" class="timeline-nav__marker is-active" data-tc="00:00"> <span class="timeline-nav__tc">00:00</span><span class="timeline-nav__label">Home</span> </a>
+          <a href="#about" class="timeline-nav__marker" data-tc="00:12"> <span class="timeline-nav__tc">00:12</span><span class="timeline-nav__label">About</span> </a>
+          <a href="#projects" class="timeline-nav__marker" data-tc="00:24"> <span class="timeline-nav__tc">00:24</span><span class="timeline-nav__label">Projects</span> </a>
+          <a href="#contacts" class="timeline-nav__marker" data-tc="00:38"> <span class="timeline-nav__tc">00:38</span><span class="timeline-nav__label">Contacts</span> </a>
+          <div class="timeline-nav__playhead" id="playhead" aria-hidden="true"></div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero__inner">
+        <div class="hero__frame">
+          <span class="hero__corner hero__corner--tl" aria-hidden="true"></span>
+          <span class="hero__corner hero__corner--tr" aria-hidden="true"></span>
+          <span class="hero__corner hero__corner--bl" aria-hidden="true"></span>
+          <span class="hero__corner hero__corner--br" aria-hidden="true"></span>
+          <img src="img/pp.png" alt="Foto Vigo Agatho" class="hero__photo" />
+        </div>
+
+        <div class="hero__copy">
+          <p class="eyebrow">Fresh Graduate · Sistem Informasi</p>
+          <h1 class="hero__name">Vigo Agatho<span class="hero__degree">, S.Kom.</span></h1>
+
+          <div class="lower-third">
+            <span class="lower-third__tag">Video Content Creator</span>
+            <span class="lower-third__tag">IT Enthusiast</span>
+            <span class="lower-third__tag">Flutter Developer</span>
+          </div>
+
+          <p class="hero__quote">&ldquo;Harm judgment aren't really necessary, as long as it doesn't come from God.&rdquo;</p>
+
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">Lihat Projects</a>
+            <a href="#contacts" class="btn btn--ghost">Hubungi Aku</a>
+          </div>
         </div>
       </div>
-    </nav>
-    <!-- End Navbar -->
-
-    <!-- Jumbotron -->
-    <section class="jumbotron text-center">
-      <img src="img/pp.png" alt="My Picture" width="200" class="rounded-circle img-thumbnail" />
-      <h1 class="display-4">Vigo Agatho, S.Kom.</h1>
-      <p class="lead">Fresh Graduated Student | Video Content Creator | IT Enthusiast</p>
-      <p class="fst-italic">"Harm judgment aren't really necessary, as long as it doesn't come from God."</p>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#fac990"
-          fill-opacity="1"
-          d="M0,96L34.3,96C68.6,96,137,96,206,106.7C274.3,117,343,139,411,154.7C480,171,549,181,617,165.3C685.7,149,754,107,823,122.7C891.4,139,960,213,1029,224C1097.1,235,1166,181,1234,149.3C1302.9,117,1371,107,1406,101.3L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
-        ></path>
-      </svg>
     </section>
-    <!-- End Jumbotron -->
 
     <!-- About -->
-    <section id="about">
-      <div class="container">
-        <div class="row mb-3">
-          <div class="col text-center">
-            <h2>About Me</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center fs-5">
-          <div class="col-md-4 mb-3">
-            Halo khalayak! Kenalin! Aku Vigo Agatho, kalian bisa panggil aku Vigo untuk ocassion formal, tapi kalau udah deket panggil aja pigo atau pigoy! Aku adalah seorang alumni Universitas Tanjungpura Pontianak, Prodi Sistem Informasi.
-          </div>
-          <div class="col-md-4 mb-3">Aku pada dasarnya seseorang yang bisa "main" Premiere Pro dan juga After Effects. Berkesinambungan dengan 2 hal diatas aku juga punya hobi bikin short movie bareng temen-temenku.</div>
-          <div class="col-md-4 mb-3">
-            Nggak sampe situ aja! sesuai katanya "IT Enthusiast" aku juga sering ngulik teknologi-teknologi pembangunan aplikasi, dan aku jatuh hati banget sama framework Flutter. Scroll terus buat lihat proyekan ku ya!
-          </div>
-        </div>
+    <section id="about" class="about">
+      <div class="section-head">
+        <span class="section-head__tc">00:12:00:00</span>
+        <h2 class="section-head__title">About Me</h2>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#e99f5a"
-          fill-opacity="1"
-          d="M0,128L40,149.3C80,171,160,213,240,208C320,203,400,149,480,154.7C560,160,640,224,720,224C800,224,880,160,960,149.3C1040,139,1120,181,1200,186.7C1280,192,1360,160,1400,144L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-        ></path>
-      </svg>
+
+      <div class="clip-notes">
+        <article class="clip-note">
+          <span class="clip-note__tc">00:00:05:12</span>
+          <p>
+            Halo khalayak! Kenalin! Aku Vigo Agatho, kalian bisa panggil aku Vigo untuk occasion formal, tapi kalau udah deket panggil aja Pigo atau Pigoy! Aku adalah seorang alumni Universitas Tanjungpura Pontianak, Prodi Sistem Informasi.
+          </p>
+        </article>
+        <article class="clip-note">
+          <span class="clip-note__tc">00:00:15:08</span>
+          <p>Aku pada dasarnya seseorang yang bisa "main" Premiere Pro dan juga After Effects. Berkesinambungan dengan 2 hal diatas aku juga punya hobi bikin short movie bareng temen-temenku.</p>
+        </article>
+        <article class="clip-note">
+          <span class="clip-note__tc">00:00:25:19</span>
+          <p>Nggak sampe situ aja! Sesuai katanya "IT Enthusiast", aku juga sering ngulik teknologi-teknologi pembangunan aplikasi, dan aku jatuh hati banget sama framework Flutter. Scroll terus buat lihat proyekan ku ya!</p>
+        </article>
+      </div>
     </section>
-    <!-- End About -->
 
     <!-- Projects -->
-    <section id="projects">
-      <div class="container">
-        <div class="row mb-3">
-          <div class="col text-center">
-            <h2>My Projects</h2>
-          </div>
+    <section id="projects" class="projects">
+      <div class="section-head">
+        <span class="section-head__tc">00:24:00:00</span>
+        <h2 class="section-head__title">Projects</h2>
+      </div>
+
+      <!-- Reel 1: Film -->
+      <div class="reel">
+        <div class="reel__head">
+          <i class="bi bi-camera-reels" aria-hidden="true"></i>
+          <h3>Film &amp; Animation Reel</h3>
+          <span class="reel__count">03 clips</span>
         </div>
-        <div class="row">
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/2d infest.jpg" class="card-img-top" alt="2D Motion Graph" />
-              <div class="card-body">
-                <h5 class="card-title">2D Motion Graphics</h5>
-                <p class="card-text">Di project ini aku membuat 2D motion graphics yang bertemakan cyberpunk untuk event Infest Universitas Tanjungpura.</p>
-                <a href="https://www.instagram.com/p/CKBdX7fr-hW/" class="btn btn-primary" target="_blank">Lihat Project</a>
+        <div class="clip-grid">
+          <article class="clip-card">
+            <a class="clip-card__media" href="https://www.instagram.com/p/CKBdX7fr-hW/" target="_blank" rel="noopener">
+              <img src="img/2d infest.jpg" alt="2D Motion Graphics" loading="lazy" />
+              <span class="clip-card__play" aria-hidden="true"><i class="fa fa-play"></i></span>
+            </a>
+            <div class="clip-card__body">
+              <h4>2D Motion Graphics</h4>
+              <p>Motion graphics bertema cyberpunk untuk event Infest Universitas Tanjungpura.</p>
+              <div class="clip-card__meta">
+                <span>TYPE · Motion Graphics</span>
+                <span>TOOL · After Effects</span>
               </div>
+              <a href="https://www.instagram.com/p/CKBdX7fr-hW/" class="clip-card__link" target="_blank" rel="noopener">Lihat Project →</a>
             </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/2d evan.jpg" class="card-img-top" alt="2D Puppet Animate" />
-              <div class="card-body">
-                <h5 class="card-title">2D Puppet Animation</h5>
-                <p class="card-text">Project satu ini merupakan hasil kolaborasi bersama Tim HPDD Infest Untan antara divisi Character design dan divisi Video editing, dalam membuat animasi dari maskot Infest yakni Evan.</p>
-                <a href="https://www.instagram.com/p/CMw6aYQr-vu/" class="btn btn-primary" target="_blank">Lihat Project</a>
+          </article>
+
+          <article class="clip-card">
+            <a class="clip-card__media" href="https://www.instagram.com/p/CMw6aYQr-vu/" target="_blank" rel="noopener">
+              <img src="img/2d evan.jpg" alt="2D Puppet Animation" loading="lazy" />
+              <span class="clip-card__play" aria-hidden="true"><i class="fa fa-play"></i></span>
+            </a>
+            <div class="clip-card__body">
+              <h4>2D Puppet Animation</h4>
+              <p>Kolaborasi bersama Tim HPDD Infest Untan, animasi maskot Infest yakni Evan.</p>
+              <div class="clip-card__meta">
+                <span>TYPE · Character Animation</span>
+                <span>COLLAB · HPDD Infest Untan</span>
               </div>
+              <a href="https://www.instagram.com/p/CMw6aYQr-vu/" class="clip-card__link" target="_blank" rel="noopener">Lihat Project →</a>
             </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/ad cleo.jpg" class="card-img-top" alt="movie ad" />
-              <div class="card-body">
-                <h5 class="card-title">Duta Muda Cleo 2021</h5>
-                <p class="card-text">Kali ini aku bersama tim produksi apalah project membuat video iklan untuk di ikuti dalam lomba Duta Muda Cleo 2021. Pada project ini aku bertugas sebagai DOP dan Video Editor.</p>
-                <a href="https://www.youtube.com/watch?v=xrs8WkFEuxc" class="btn btn-primary" target="_blank">Lihat Project</a>
+          </article>
+
+          <article class="clip-card">
+            <a class="clip-card__media" href="https://www.youtube.com/watch?v=xrs8WkFEuxc" target="_blank" rel="noopener">
+              <img src="img/ad cleo.jpg" alt="Duta Muda Cleo 2021" loading="lazy" />
+              <span class="clip-card__play" aria-hidden="true"><i class="fa fa-play"></i></span>
+            </a>
+            <div class="clip-card__body">
+              <h4>Duta Muda Cleo 2021</h4>
+              <p>Video iklan untuk lomba Duta Muda Cleo 2021. Bertugas sebagai DOP dan Video Editor.</p>
+              <div class="clip-card__meta">
+                <span>TYPE · TVC / Ad Video</span>
+                <span>ROLE · DOP &amp; Editor</span>
               </div>
+              <a href="https://www.youtube.com/watch?v=xrs8WkFEuxc" class="clip-card__link" target="_blank" rel="noopener">Lihat Project →</a>
             </div>
-          </div>
-        </div>
-        <!-- Row 2 -->
-        <div class="row">
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/aninext.png" class="card-img-top" alt="2D Motion Graph" />
-              <div class="card-body">
-                <h5 class="card-title">Aninext Mobile App</h5>
-                <p class="card-text">
-                  Untuk menghadapi UAS Pemograman Perangkat Bergerak, aku dan tim membuat proyek aplikasi mobile streaming yang terinspirasi dari app bstation, Hidup Wibu! Link aku taruh buat lihat postinganku yah lumayan nambah views
-                  xixixi
-                </p>
-                <a
-                  href="https://www.linkedin.com/posts/vigo-agatho-4b51a7257_just-finished-our-final-exam-project-for-activity-7135001892983611393-K5Mv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD812AkBN1DkpLBbxlYkwNHcmZlJdVQVdAo"
-                  class="btn btn-primary"
-                  target="_blank"
-                  >Lihat Project</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/ruang_baca_bg.png" class="card-img-top" alt="2D Puppet Animate" />
-              <div class="card-body">
-                <h5 class="card-title">Ruang Baca</h5>
-                <p class="card-text">E-Library pertama buatanku yang jadi salah satu proyek aplikasi paling siap dari aku karena secara fullstack aku kerjain, walaupun pakai API open source sih mwehehehee.</p>
-                <a href="https://github.com/vigoagatho/mini_project.git" class="btn btn-primary" target="_blank">Lihat Project</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/Ruang.png" class="card-img-top" alt="movie ad" />
-              <div class="card-body">
-                <h5 class="card-title">REPO MIPA</h5>
-                <p class="card-text">
-                  Platform repositori dokumen tugas akhir buat fakultas MIPA salah satu universitas di Indonesia, ini proyek tugas akhirku supaya bisa mendapat gelar S.Kom yang di gadang-gadang itu. Kalian bisa lihat demo app nya dalam
-                  bentuk video loh!
-                </p>
-                <a href="https://youtu.be/vGdwdAQu4QM" class="btn btn-primary" target="_blank">Lihat Project</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/eve_fight.png" class="card-img-top" alt="movie ad" />
-              <div class="card-body">
-                <h5 class="card-title">Everybody Fighters</h5>
-                <p class="card-text">
-                  Proyek gabut semasa menganggur habis sidang akhir nih! Everybody Fighters adalah game 2D fighting yang aku buat menggunakan Ikemen_GO yang merupakan engine game fighting open source. Game nya lagi masuk tahap playtest jadi
-                  buat yang mau cobain silahkan ya!
-                </p>
-                <a href="https://s.id/qzSAE" class="btn btn-primary" target="_blank">Unduh Project</a>
-              </div>
-            </div>
-          </div>
+          </article>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffd3a0"
-          fill-opacity="1"
-          d="M0,160L30,149.3C60,139,120,117,180,138.7C240,160,300,224,360,240C420,256,480,224,540,218.7C600,213,660,235,720,224C780,213,840,171,900,160C960,149,1020,171,1080,197.3C1140,224,1200,256,1260,240C1320,224,1380,160,1410,128L1440,96L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
-        ></path>
-      </svg>
+
+      <!-- Reel 2: Code -->
+      <div class="reel">
+        <div class="reel__head">
+          <i class="bi bi-code-slash" aria-hidden="true"></i>
+          <h3>Code &amp; Dev Reel</h3>
+          <span class="reel__count">04 builds</span>
+        </div>
+        <div class="clip-grid">
+          <article class="clip-card">
+            <a
+              class="clip-card__media"
+              href="https://www.linkedin.com/posts/vigo-agatho-4b51a7257_just-finished-our-final-exam-project-for-activity-7135001892983611393-K5Mv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD812AkBN1DkpLBbxlYkwNHcmZlJdVQVdAo"
+              target="_blank"
+              rel="noopener"
+            >
+              <img src="img/aninext.png" alt="Aninext Mobile App" loading="lazy" />
+              <span class="clip-card__play" aria-hidden="true"><i class="fa fa-external-link"></i></span>
+            </a>
+            <div class="clip-card__body">
+              <h4>Aninext Mobile App</h4>
+              <p>UAS Pemograman Perangkat Bergerak — app mobile streaming terinspirasi dari bStation.</p>
+              <div class="clip-card__meta">
+                <span>TYPE · Mobile App</span>
+                <span>STACK · Flutter</span>
+              </div>
+              <a
+                href="https://www.linkedin.com/posts/vigo-agatho-4b51a7257_just-finished-our-final-exam-project-for-activity-7135001892983611393-K5Mv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD812AkBN1DkpLBbxlYkwNHcmZlJdVQVdAo"
+                class="clip-card__link"
+                target="_blank"
+                rel="noopener"
+                >Lihat Project →</a
+              >
+            </div>
+          </article>
+
+          <article class="clip-card">
+            <a class="clip-card__media" href="https://github.com/vigoagatho/mini_project.git" target="_blank" rel="noopener">
+              <img src="img/ruang_baca_bg.png" alt="Ruang Baca" loading="lazy" />
+              <span class="clip-card__play" aria-hidden="true"><i class="fa fa-external-link"></i></span>
+            </a>
+            <div class="clip-card__body">
+              <h4>Ruang Baca</h4>
+              <p>E-Library pertama buatanku, dikerjakan fullstack dengan bantuan API open source.</p>
+              <div class="clip-card__meta">
+                <span>TYPE · Web App (Fullstack)</span>
+                <span>CAT · E-Library</span>
+              </div>
+              <a href="https://github.com/vigoagatho/mini_project.git" class="clip-card__link" target="_blank" rel="noopener">Lihat Project →</a>
+            </div>
+          </article>
+
+          <article class="clip-card">
+            <a class="clip-card__media" href="https://youtu.be/vGdwdAQu4QM" target="_blank" rel="noopener">
+              <img src="img/Ruang.png" alt="REPO MIPA" loading="lazy" />
+              <span class="clip-card__play" aria-hidden="true"><i class="fa fa-play"></i></span>
+            </a>
+            <div class="clip-card__body">
+              <h4>REPO MIPA</h4>
+              <p>Platform repositori dokumen tugas akhir untuk fakultas MIPA — proyek skripsi gelar S.Kom.</p>
+              <div class="clip-card__meta">
+                <span>TYPE · Thesis Project</span>
+                <span>CAT · Document Repository</span>
+              </div>
+              <a href="https://youtu.be/vGdwdAQu4QM" class="clip-card__link" target="_blank" rel="noopener">Lihat Project →</a>
+            </div>
+          </article>
+
+          <article class="clip-card">
+            <a class="clip-card__media" href="https://s.id/qzSAE" target="_blank" rel="noopener">
+              <img src="img/eve_fight.png" alt="Everybody Fighters" loading="lazy" />
+              <span class="clip-card__play" aria-hidden="true"><i class="fa fa-external-link"></i></span>
+            </a>
+            <div class="clip-card__body">
+              <h4>Everybody Fighters</h4>
+              <p>Game 2D fighting yang dibangun pakai Ikemen GO, engine fighting game open source. Masih tahap playtest.</p>
+              <div class="clip-card__meta">
+                <span>TYPE · 2D Game</span>
+                <span>ENGINE · Ikemen GO</span>
+              </div>
+              <a href="https://s.id/qzSAE" class="clip-card__link" target="_blank" rel="noopener">Unduh Project →</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
-    <!-- End Projects -->
 
     <!-- Contact -->
-    <section id="contacts">
-      <div class="container pt-5">
-        <div class="row text-center">
-          <div class="col">
-            <h2>Find Me on These Platforms!</h2>
-          </div>
+    <section id="contacts" class="contacts">
+      <div class="section-head">
+        <span class="section-head__tc">00:38:00:00</span>
+        <h2 class="section-head__title">Find Me On</h2>
+      </div>
+
+      <div class="export-panel">
+        <div class="export-panel__row">
+          <span class="export-panel__label">Status</span>
+          <span class="export-panel__value">Open to opportunities</span>
         </div>
-        <div class="social-buttons mt-5">
-          <a href="https://www.facebook.com/kristian.agatho" class="neo-button">
-            <i class="fa fa-facebook fa-5x"></i>
+        <div class="export-panel__row">
+          <span class="export-panel__label">Base</span>
+          <span class="export-panel__value">Pontianak, Kalimantan Barat</span>
+        </div>
+        <div class="export-panel__divider"></div>
+
+        <div class="social-list">
+          <a href="https://www.facebook.com/kristian.agatho" class="social-list__item" target="_blank" rel="noopener">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <span>Facebook</span>
+            <i class="fa fa-external-link social-list__arrow" aria-hidden="true"></i>
           </a>
-          <a href="https://www.youtube.com/@bukanvigo" class="neo-button">
-            <i class="fa fa-youtube fa-5x"></i>
+          <a href="https://www.youtube.com/@bukanvigo" class="social-list__item" target="_blank" rel="noopener">
+            <i class="fa fa-youtube" aria-hidden="true"></i>
+            <span>YouTube</span>
+            <i class="fa fa-external-link social-list__arrow" aria-hidden="true"></i>
           </a>
-          <a href="https://www.instagram.com/oohvigo/" class="neo-button"><i class="fa fa-instagram fa-5x"></i></a>
+          <a href="https://www.instagram.com/oohvigo/" class="social-list__item" target="_blank" rel="noopener">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <span>Instagram</span>
+            <i class="fa fa-external-link social-list__arrow" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#1b1200"
-          fill-opacity="1"
-          d="M0,224L60,202.7C120,181,240,139,360,138.7C480,139,600,181,720,192C840,203,960,181,1080,181.3C1200,181,1320,203,1380,213.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-        ></path>
-      </svg>
     </section>
-    <!-- End Contact -->
 
     <!-- Footer -->
-    <footer class="text-white text-center pb-3" style="background-color: #1b1200">
-      <p>Created by the one and only Vigo Agatho <i class="bi bi-heart-fill"></i></p>
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Vigo Agatho — Created with <i class="bi bi-heart-fill" aria-hidden="true"></i></p>
     </footer>
-    <!-- End Footer -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
   </body>
 </html>
