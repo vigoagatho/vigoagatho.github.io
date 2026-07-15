@@ -49,7 +49,9 @@
           <a href="#home" class="timeline-nav__marker is-active" data-tc="00:00"> <span class="timeline-nav__tc">00:00</span><span class="timeline-nav__label">Home</span> </a>
           <a href="#about" class="timeline-nav__marker" data-tc="00:12"> <span class="timeline-nav__tc">00:12</span><span class="timeline-nav__label">About</span> </a>
           <a href="#projects" class="timeline-nav__marker" data-tc="00:24"> <span class="timeline-nav__tc">00:24</span><span class="timeline-nav__label">Projects</span> </a>
-          <a href="#contacts" class="timeline-nav__marker" data-tc="00:38"> <span class="timeline-nav__tc">00:38</span><span class="timeline-nav__label">Contacts</span> </a>
+          <a href="#offduty" class="timeline-nav__marker" data-tc="00:50"> <span class="timeline-nav__tc">00:38</span><span class="timeline-nav__label">Off Duty</span> </a>
+          <a href="#contacts" class="timeline-nav__marker" data-tc="00:38"> <span class="timeline-nav__tc">00:50</span><span class="timeline-nav__label">Contacts</span> </a>
+
           <div class="timeline-nav__playhead" id="playhead" aria-hidden="true"></div>
         </nav>
       </div>
@@ -74,6 +76,8 @@
             <span class="lower-third__tag">Video Content Creator</span>
             <span class="lower-third__tag">IT Enthusiast</span>
             <span class="lower-third__tag">Flutter Developer</span>
+            <span class="lower-third__tag">JRPG Head</span>
+            <span class="lower-third__tag">Anime Enthusiast</span>
           </div>
 
           <p class="hero__quote">&ldquo;Harm judgment aren't really necessary, as long as it doesn't come from God.&rdquo;</p>
@@ -83,6 +87,26 @@
             <a href="#contacts" class="btn btn--ghost">Hubungi Aku</a>
           </div>
         </div>
+
+        <aside class="status-widget" aria-label="Status saat ini">
+          <div class="status-widget__bar">
+            <span class="status-widget__dot status-widget__dot--red"></span>
+            <span class="status-widget__dot status-widget__dot--gold"></span>
+            <span class="status-widget__dot status-widget__dot--cyan"></span>
+            <span class="status-widget__filename">now_playing.log</span>
+          </div>
+          <div class="status-widget__body">
+            <div>
+              <p class="status-widget__block-label">Currently Playing</p>
+              <p class="status-widget__item">Zenless Zone Zero</p>
+              <p class="status-widget__item">Persona 5: The Phantom X</p>
+            </div>
+            <div>
+              <p class="status-widget__block-label">All-Time GOAT</p>
+              <p class="status-widget__item status-widget__item--goat">Persona 4 Golden<span class="status-widget__cursor" aria-hidden="true"></span></p>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -97,16 +121,23 @@
         <article class="clip-note">
           <span class="clip-note__tc">00:00:05:12</span>
           <p>
-            Halo khalayak! Kenalin! Aku Vigo Agatho, kalian bisa panggil aku Vigo untuk occasion formal, tapi kalau udah deket panggil aja Pigo atau Pigoy! Aku adalah seorang alumni Universitas Tanjungpura Pontianak, Prodi Sistem Informasi.
+            Halo khalayak! Kenalin, aku Vigo Agatho — panggil aja Vigo untuk occasion formal, tapi kalau udah deket panggil aja Pigo atau Pigoy! Aku alumni Sistem Informasi Universitas Tanjungpura Pontianak, dan sepanjang kuliah aku sengaja
+            nyemplung ke dua dunia sekaligus: visual storytelling dan software development.
           </p>
         </article>
         <article class="clip-note">
           <span class="clip-note__tc">00:00:15:08</span>
-          <p>Aku pada dasarnya seseorang yang bisa "main" Premiere Pro dan juga After Effects. Berkesinambungan dengan 2 hal diatas aku juga punya hobi bikin short movie bareng temen-temenku.</p>
+          <p>
+            Di sisi visual, aku terbiasa "main" Premiere Pro dan After Effects — mulai dari motion graphics, character animation, sampai video iklan. Bareng temen-temen aku juga sering bikin short movie, karena buat aku proses ngedit itu
+            sama serunya kayak nonton hasil jadinya.
+          </p>
         </article>
         <article class="clip-note">
           <span class="clip-note__tc">00:00:25:19</span>
-          <p>Nggak sampe situ aja! Sesuai katanya "IT Enthusiast", aku juga sering ngulik teknologi-teknologi pembangunan aplikasi, dan aku jatuh hati banget sama framework Flutter. Scroll terus buat lihat proyekan ku ya!</p>
+          <p>
+            Di sisi lain, aku "IT Enthusiast" yang doyan ngulik teknologi pembangunan aplikasi, dan jatuh hati banget sama framework Flutter. Kalau lagi nggak di depan timeline atau code editor, biasanya aku lagi grinding JRPG atau ngikutin
+            serial anime — dua hal yang selalu jadi sumber inspirasi visual aku. Scroll terus buat lihat proyekan ku ya!
+          </p>
         </article>
       </div>
     </section>
@@ -196,7 +227,7 @@
             </a>
             <div class="clip-card__body">
               <h4>Aninext Mobile App</h4>
-              <p>UAS Pemograman Perangkat Bergerak — app mobile streaming terinspirasi dari bStation.</p>
+              <p>UAS Pemograman Perangkat Bergerak — app mobile streaming terinspirasi dari BStation.</p>
               <div class="clip-card__meta">
                 <span>TYPE · Mobile App</span>
                 <span>STACK · Flutter</span>
@@ -220,7 +251,7 @@
               <h4>Ruang Baca</h4>
               <p>E-Library pertama buatanku, dikerjakan fullstack dengan bantuan API open source.</p>
               <div class="clip-card__meta">
-                <span>TYPE · Web App (Fullstack)</span>
+                <span>TYPE · Mobile App (Fullstack)</span>
                 <span>CAT · E-Library</span>
               </div>
               <a href="https://github.com/vigoagatho/mini_project.git" class="clip-card__link" target="_blank" rel="noopener">Lihat Project →</a>
@@ -262,10 +293,63 @@
       </div>
     </section>
 
+    <!-- Off Duty -->
+    <section id="offduty" class="offduty">
+      <div class="section-head">
+        <span class="section-head__tc">00:38:00:00</span>
+        <h2 class="section-head__title">Off Duty</h2>
+      </div>
+      <p class="offduty__intro">Di luar kerjaan, layar ini biasanya nyala buat hal-hal berikut.</p>
+
+      <div class="offduty__grid">
+        <article class="save-panel">
+          <div class="save-panel__head">
+            <i class="bi bi-controller" aria-hidden="true"></i>
+            <span>Save Data — Games</span>
+          </div>
+          <ul class="save-panel__list">
+            <li>
+              <span class="save-panel__tag save-panel__tag--live">Playing</span>
+              <span class="save-panel__name">Zenless Zone Zero</span>
+            </li>
+            <li>
+              <span class="save-panel__tag save-panel__tag--live">Playing</span>
+              <span class="save-panel__name">Persona 5: The Phantom X</span>
+            </li>
+            <li>
+              <span class="save-panel__tag save-panel__tag--goat">All-Time GOAT</span>
+              <span class="save-panel__name">Persona 4 Golden</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="save-panel">
+          <div class="save-panel__head">
+            <i class="bi bi-tv" aria-hidden="true"></i>
+            <span>Watchlist — Anime</span>
+          </div>
+          <ul class="save-panel__list">
+            <li>
+              <span class="save-panel__tag save-panel__tag--pick">Top Pick</span>
+              <span class="save-panel__name">Bleach</span>
+            </li>
+            <li>
+              <span class="save-panel__tag save-panel__tag--pick">Top Pick</span>
+              <span class="save-panel__name">Fullmetal Alchemist: Brotherhood</span>
+            </li>
+            <li>
+              <span class="save-panel__tag save-panel__tag--pick">Top Pick</span>
+              <span class="save-panel__name">Frieren: Beyond Journey's End</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
     <!-- Contact -->
     <section id="contacts" class="contacts">
       <div class="section-head">
-        <span class="section-head__tc">00:38:00:00</span>
+        <span class="section-head__tc">00:50:00:00</span>
         <h2 class="section-head__title">Find Me On</h2>
       </div>
 
