@@ -31,6 +31,9 @@ function updateActiveMarker() {
     }
   });
 
+  // If the page is scrolled to (or near) the bottom, force the last marker
+  // active — short trailing sections/footer can mean scrollPos never
+  // actually reaches the last section's offsetTop.
   const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
   if (atBottom) {
     activeIndex = markers.length - 1;
@@ -48,3 +51,29 @@ function updateActiveMarker() {
 window.addEventListener("scroll", updateActiveMarker, { passive: true });
 window.addEventListener("resize", updateActiveMarker);
 window.addEventListener("load", updateActiveMarker);
+
+// Project reel horizontal scroller: arrow buttons + edge fade state
+document.querySelectorAll(".reel__scroller").forEach((scroller) => {
+  const track = scroller.querySelector(".clip-grid");
+  const prevBtn = scroller.querySelector(".reel__arrow--prev");
+  const nextBtn = scroller.querySelector(".reel__arrow--next");
+  if (!track) return;
+
+  function refreshEdges() {
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    scroller.classList.toggle("is-at-start", track.scrollLeft <= 4);
+    scroller.classList.toggle("is-at-end", track.scrollLeft >= maxScroll - 4);
+  }
+
+  function scrollByCard(direction) {
+    const card = track.querySelector(".clip-card");
+    const step = card ? card.getBoundingClientRect().width + 20 : 280;
+    track.scrollBy({ left: direction * step, behavior: "smooth" });
+  }
+
+  prevBtn?.addEventListener("click", () => scrollByCard(-1));
+  nextBtn?.addEventListener("click", () => scrollByCard(1));
+  track.addEventListener("scroll", refreshEdges, { passive: true });
+  window.addEventListener("resize", refreshEdges);
+  refreshEdges();
+});

@@ -607,7 +607,7 @@ img {
    PROJECTS
    ============================================ */
 .projects {
-  padding: 24px 0 24px;
+  padding: 24px 0 96px;
 }
 
 .reel {
@@ -644,10 +644,60 @@ img {
   color: var(--paper-dim);
 }
 
+.reel__scroller {
+  position: relative;
+}
+
+/* Fade hint on the right/left edges so people know there's more to scroll */
+.reel__scroller::before,
+.reel__scroller::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 12px;
+  width: 48px;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.2s ease;
+}
+
+.reel__scroller::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--ink) 0%, transparent 100%);
+  opacity: 0;
+}
+
+.reel__scroller::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--ink) 0%, transparent 100%);
+}
+
+.reel__scroller.is-at-start::before {
+  opacity: 0;
+}
+.reel__scroller.is-at-end::after {
+  opacity: 0;
+}
+
 .clip-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scroll-padding-left: 4px;
+  padding-bottom: 14px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-dim) transparent;
+}
+
+.clip-grid::-webkit-scrollbar {
+  height: 6px;
+}
+.clip-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+.clip-grid::-webkit-scrollbar-thumb {
+  background: var(--gold-dim);
 }
 
 .clip-card {
@@ -655,6 +705,48 @@ img {
   border: 1px solid var(--hairline);
   display: flex;
   flex-direction: column;
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+}
+
+.reel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--hairline);
+  background: var(--ink-raised);
+  color: var(--paper);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.reel__arrow:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.reel__arrow--prev {
+  left: -18px;
+}
+
+.reel__arrow--next {
+  right: -18px;
+}
+
+@media (max-width: 640px) {
+  .reel__arrow {
+    display: none;
+  }
+  .clip-card {
+    flex-basis: 240px;
+  }
 }
 
 .clip-card__media {
@@ -742,7 +834,7 @@ img {
    CONTACT — export panel
    ============================================ */
 .contacts {
-  padding: 48px 0 96px;
+  padding: 24px 0 96px;
 }
 
 .export-panel {
