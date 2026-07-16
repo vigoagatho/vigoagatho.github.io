@@ -188,11 +188,16 @@ img {
   width: 30px;
   height: 30px;
   border: 1px solid var(--gold);
-  color: var(--gold);
   display: grid;
   place-items: center;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.timeline-nav__brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .timeline-nav__toggle {
@@ -737,7 +742,7 @@ img {
    CONTACT — export panel
    ============================================ */
 .contacts {
-  padding: 24px 0 96px;
+  padding: 48px 0 96px;
 }
 
 .export-panel {

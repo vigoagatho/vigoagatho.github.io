@@ -31,6 +31,11 @@ function updateActiveMarker() {
     }
   });
 
+  const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+  if (atBottom) {
+    activeIndex = markers.length - 1;
+  }
+
   markers.forEach((m, i) => m.classList.toggle("is-active", i === activeIndex));
 
   const activeMarker = markers[activeIndex];
