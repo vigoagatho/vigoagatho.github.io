@@ -14,9 +14,9 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio | Vigo Agatho</title>
-    <meta name="description" content="Portofolio web Vigo Agatho, seorang Front-End Developer yang berfokus pada ekosistem Flutter dan React JS, serta mengimplementasikan alur kerja sebagai AI-augmented programmer." />
-    <meta name="keywords" content="Vigo Agatho, Front-End Developer, Flutter, React JS, Web Developer" />
+    <title>Vigo Agatho — Software Developer (Flutter &amp; Web)</title>
+    <meta name="description" content="Portofolio Vigo Agatho, software developer yang fokus di Flutter dan web, dengan latar belakang video, motion, dan animasi." />
+    <meta name="keywords" content="Vigo Agatho, Software Developer, Front-End Developer, Flutter, React JS, Web Developer" />
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
@@ -30,12 +30,15 @@
     <link rel="icon" type="image/png" href="img/webicon.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body id="home">
+  <body>
+    <a class="skip-link" href="#main">Langsung ke konten</a>
+
     <!-- REC / status strip -->
-    <div class="rec-strip" aria-hidden="true">
-      <span class="rec-dot"></span>
+    <div class="rec-strip">
+      <span class="rec-dot" aria-hidden="true"></span>
       <span class="rec-strip__text">REC — VIGO_AGATHO_PORTFOLIO.PROJ</span>
-      <span class="rec-strip__text rec-strip__text--right">SIS. INFORMASI · UNTAN · PONTIANAK</span>
+      <span class="rec-strip__text rec-strip__text--right">SIS. INFORMASI · UNTAN</span>
+      <span class="rec-strip__tc" id="reelTimecode" aria-label="Posisi reel">00:00:00:00</span>
     </div>
 
     <!-- Timeline Nav -->
@@ -48,381 +51,489 @@
           <span class="timeline-nav__brand-name">Vigo Agatho</span>
         </a>
 
-        <button class="timeline-nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <button class="timeline-nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navTrack"><span></span><span></span><span></span></button>
 
-        <nav class="timeline-nav__track" id="navTrack">
+        <nav class="timeline-nav__track" id="navTrack" aria-label="Navigasi bagian">
           <a href="#home" class="timeline-nav__marker is-active" data-tc="00:00"> <span class="timeline-nav__tc">00:00</span><span class="timeline-nav__label">Home</span> </a>
-          <a href="#about" class="timeline-nav__marker" data-tc="00:12"> <span class="timeline-nav__tc">00:12</span><span class="timeline-nav__label">About</span> </a>
-          <a href="#projects" class="timeline-nav__marker" data-tc="00:24"> <span class="timeline-nav__tc">00:24</span><span class="timeline-nav__label">Projects</span> </a>
-          <a href="#offduty" class="timeline-nav__marker" data-tc="00:50"> <span class="timeline-nav__tc">00:38</span><span class="timeline-nav__label">Off Duty</span> </a>
-          <a href="#contacts" class="timeline-nav__marker" data-tc="00:38"> <span class="timeline-nav__tc">00:50</span><span class="timeline-nav__label">Contacts</span> </a>
+          <a href="#about" class="timeline-nav__marker" data-tc="00:08"> <span class="timeline-nav__tc">00:08</span><span class="timeline-nav__label">About</span> </a>
+          <a href="#work" class="timeline-nav__marker" data-tc="00:16"> <span class="timeline-nav__tc">00:16</span><span class="timeline-nav__label">Work</span> </a>
+          <a href="#toolbox" class="timeline-nav__marker" data-tc="00:30"> <span class="timeline-nav__tc">00:30</span><span class="timeline-nav__label">Toolbox</span> </a>
+          <a href="#visual" class="timeline-nav__marker" data-tc="00:36"> <span class="timeline-nav__tc">00:36</span><span class="timeline-nav__label">Visual</span> </a>
+          <a href="#offduty" class="timeline-nav__marker" data-tc="00:42"> <span class="timeline-nav__tc">00:42</span><span class="timeline-nav__label">Off Duty</span> </a>
+          <a href="#contacts" class="timeline-nav__marker" data-tc="00:50"> <span class="timeline-nav__tc">00:50</span><span class="timeline-nav__label">Contact</span> </a>
           <div class="timeline-nav__playhead" id="playhead" aria-hidden="true"></div>
         </nav>
       </div>
     </header>
 
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <div class="hero__inner">
-        <div class="hero__frame">
-          <span class="hero__corner hero__corner--tl" aria-hidden="true"></span>
-          <span class="hero__corner hero__corner--tr" aria-hidden="true"></span>
-          <span class="hero__corner hero__corner--bl" aria-hidden="true"></span>
-          <span class="hero__corner hero__corner--br" aria-hidden="true"></span>
-          <img src="img/pp.png" alt="Foto Vigo Agatho" class="hero__photo" />
-        </div>
-
-        <div class="hero__copy">
-          <p class="eyebrow">Fresh Graduate · Sistem Informasi</p>
-          <h1 class="hero__name">Vigo Agatho<span class="hero__degree">, S.Kom.</span></h1>
-
-          <div class="lower-third">
-            <span class="lower-third__tag">Video Content Creator</span>
-            <span class="lower-third__tag">IT Enthusiast</span>
-            <span class="lower-third__tag">Flutter Developer</span>
-            <span class="lower-third__tag">JRPG Head</span>
-            <span class="lower-third__tag">Anime Enthusiast</span>
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero" id="home" aria-labelledby="heroTitle">
+        <div class="hero__inner">
+          <div class="hero__frame">
+            <span class="hero__corner hero__corner--tl" aria-hidden="true"></span>
+            <span class="hero__corner hero__corner--tr" aria-hidden="true"></span>
+            <span class="hero__corner hero__corner--bl" aria-hidden="true"></span>
+            <span class="hero__corner hero__corner--br" aria-hidden="true"></span>
+            <img src="img/pp.png" alt="Foto Vigo Agatho" class="hero__photo" />
           </div>
 
-          <p class="hero__quote">&ldquo;Harm judgment aren't really necessary, as long as it doesn't come from God.&rdquo;</p>
+          <div class="hero__copy">
+            <p class="eyebrow">Front-end Developer · Software Developer</p>
+            <h1 class="hero__name" id="heroTitle">Vigo Agatho<span class="hero__degree">, S.Kom.</span></h1>
 
-          <div class="hero__actions">
-            <a href="#projects" class="btn btn--primary">Lihat Projects</a>
-            <a href="#contacts" class="btn btn--ghost">Hubungi Aku</a>
-          </div>
-        </div>
+            <p class="hero__lede">A junior software engineer with an editor’s eye—obsessed with timing, transitions, and the small details that turn an app from functional into memorable.</p>
 
-        <aside class="status-widget" aria-label="Status saat ini">
-          <div class="status-widget__bar">
-            <span class="status-widget__dot status-widget__dot--red"></span>
-            <span class="status-widget__dot status-widget__dot--gold"></span>
-            <span class="status-widget__dot status-widget__dot--cyan"></span>
-            <span class="status-widget__filename">now_playing.log</span>
-          </div>
-          <div class="status-widget__body">
-            <div>
-              <p class="status-widget__block-label">Currently Playing</p>
-              <p class="status-widget__item">Zenless Zone Zero</p>
-              <p class="status-widget__item">Persona 5: The Phantom X</p>
+            <div class="hero__stack" aria-label="Stack utama">
+              <span class="chip">Flutter</span>
+              <span class="chip">React JS</span>
+              <span class="chip">AI-augmented workflow</span>
             </div>
-            <div>
-              <p class="status-widget__block-label">All-Time GOAT</p>
-              <p class="status-widget__item status-widget__item--goat">Persona 4 Golden<span class="status-widget__cursor" aria-hidden="true"></span></p>
+
+            <div class="hero__actions">
+              <a href="#work" class="btn btn--primary">View Projects</a>
+              <a href="#contacts" class="btn btn--ghost">Get in Touch</a>
             </div>
           </div>
-        </aside>
-      </div>
-    </section>
 
-    <!-- About -->
-    <section id="about" class="about">
-      <div class="section-head">
-        <span class="section-head__tc">00:12:00:00</span>
-        <h2 class="section-head__title">About Me</h2>
-      </div>
-
-      <div class="clip-notes">
-        <article class="clip-note">
-          <span class="clip-note__tc">00:00:05:12</span>
-          <p>
-            Halo khalayak! Kenalin, aku Vigo Agatho — panggil aja Vigo untuk occasion formal, tapi kalau udah deket panggil aja Pigo atau Pigoy! Aku alumni Sistem Informasi Universitas Tanjungpura Pontianak, dan sepanjang kuliah aku sengaja
-            nyemplung ke dua dunia sekaligus: visual storytelling dan software development.
-          </p>
-        </article>
-        <article class="clip-note">
-          <span class="clip-note__tc">00:00:15:08</span>
-          <p>
-            Di sisi visual, aku terbiasa "main" Premiere Pro dan After Effects — mulai dari motion graphics, character animation, sampai video iklan. Bareng temen-temen aku juga sering bikin short movie, karena buat aku proses ngedit itu
-            sama serunya kayak nonton hasil jadinya.
-          </p>
-        </article>
-        <article class="clip-note">
-          <span class="clip-note__tc">00:00:25:19</span>
-          <p>
-            Di sisi lain, aku "IT Enthusiast" yang doyan ngulik teknologi pembangunan aplikasi, dan jatuh hati banget sama framework Flutter. Kalau lagi nggak di depan timeline atau code editor, biasanya aku lagi grinding JRPG atau ngikutin
-            serial anime — dua hal yang selalu jadi sumber inspirasi visual aku. Scroll terus buat lihat proyekan ku ya!
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="projects">
-      <div class="section-head">
-        <span class="section-head__tc">00:24:00:00</span>
-        <h2 class="section-head__title">Projects</h2>
-      </div>
-
-      <!-- Reel 1: Film -->
-      <div class="reel">
-        <div class="reel__head">
-          <i class="bi bi-camera-reels" aria-hidden="true"></i>
-          <h3>Film &amp; Animation Reel</h3>
-          <span class="reel__count">04 clips</span>
+          <aside class="status-widget" aria-label="Status saat ini">
+            <div class="status-widget__bar">
+              <span class="status-widget__dot status-widget__dot--red"></span>
+              <span class="status-widget__dot status-widget__dot--gold"></span>
+              <span class="status-widget__dot status-widget__dot--cyan"></span>
+              <span class="status-widget__filename">status.log</span>
+            </div>
+            <div class="status-widget__body">
+              <div>
+                <p class="status-widget__block-label">Status</p>
+                <p class="status-widget__item status-widget__item--goat">Open to opportunities<span class="status-widget__cursor" aria-hidden="true"></span></p>
+              </div>
+              <div>
+                <p class="status-widget__block-label">Currently Learning</p>
+                <p class="status-widget__item">React ecosystem</p>
+              </div>
+              <div>
+                <p class="status-widget__block-label">Currently Playing</p>
+                <p class="status-widget__item">Zenless Zone Zero</p>
+              </div>
+            </div>
+          </aside>
         </div>
-        <div class="reel__scroller is-at-start">
-          <button class="reel__arrow reel__arrow--prev" type="button" aria-label="Scroll ke kiri" data-scroll="-1">
-            <i class="bi bi-chevron-left" aria-hidden="true"></i>
-          </button>
-          <div class="clip-grid" tabindex="0" role="region" aria-label="Daftar project film & animation, geser untuk lihat lebih banyak">
-            <article class="clip-card">
-              <a class="clip-card__media" href="https://www.instagram.com/p/CKBdX7fr-hW/" target="_blank" rel="noopener">
-                <img src="img/2d infest.jpg" alt="2D Motion Graphics" loading="lazy" />
-                <span class="clip-card__play" aria-hidden="true"><i class="fa fa-play"></i></span>
-              </a>
-              <div class="clip-card__body">
-                <h4>2D Motion Graphics</h4>
-                <p>Motion graphics bertema cyberpunk untuk event Infest Universitas Tanjungpura.</p>
-                <div class="clip-card__meta">
-                  <span>TYPE · Motion Graphics</span>
-                  <span>TOOL · After Effects</span>
-                </div>
-                <a href="https://www.instagram.com/p/CKBdX7fr-hW/" class="clip-card__link" target="_blank" rel="noopener">Lihat Project →</a>
-              </div>
-            </article>
+      </section>
 
-            <article class="clip-card">
-              <a class="clip-card__media" href="https://www.instagram.com/p/CMw6aYQr-vu/" target="_blank" rel="noopener">
-                <img src="img/2d evan.jpg" alt="2D Puppet Animation" loading="lazy" />
-                <span class="clip-card__play" aria-hidden="true"><i class="fa fa-play"></i></span>
-              </a>
-              <div class="clip-card__body">
-                <h4>2D Puppet Animation</h4>
-                <p>Kolaborasi bersama Tim HPDD Infest Untan, animasi maskot Infest yakni Evan.</p>
-                <div class="clip-card__meta">
-                  <span>TYPE · Character Animation</span>
-                  <span>COLLAB · HPDD Infest Untan</span>
-                </div>
-                <a href="https://www.instagram.com/p/CMw6aYQr-vu/" class="clip-card__link" target="_blank" rel="noopener">Lihat Project →</a>
-              </div>
-            </article>
-
-            <article class="clip-card">
-              <a class="clip-card__media" href="https://www.youtube.com/watch?v=xrs8WkFEuxc" target="_blank" rel="noopener">
-                <img src="img/ad cleo.jpg" alt="Duta Muda Cleo 2021" loading="lazy" />
-                <span class="clip-card__play" aria-hidden="true"><i class="fa fa-play"></i></span>
-              </a>
-              <div class="clip-card__body">
-                <h4>Duta Muda Cleo 2021</h4>
-                <p>Video iklan untuk lomba Duta Muda Cleo 2021. Bertugas sebagai DOP dan Video Editor.</p>
-                <div class="clip-card__meta">
-                  <span>TYPE · TVC / Ad Video</span>
-                  <span>ROLE · DOP &amp; Editor</span>
-                </div>
-                <a href="https://www.youtube.com/watch?v=xrs8WkFEuxc" class="clip-card__link" target="_blank" rel="noopener">Lihat Project →</a>
-              </div>
-            </article>
-            <article class="clip-card">
-              <a class="clip-card__media" href="https://youtu.be/9bCe5yrXB8Y?si=UCHf5VCr4E7EqCrQ" target="_blank" rel="noopener">
-                <img src="img/menyadik.jpg" alt="Duta Muda Cleo 2021" loading="lazy" />
-                <span class="clip-card__play" aria-hidden="true"><i class="fa fa-play"></i></span>
-              </a>
-              <div class="clip-card__body">
-                <h4>Menyadik Short Movie</h4>
-                <p>Short movie bertemakan pewarisan budaya lokal dimasa pandemi. Bertugas sebagai DOP dan Video Editor.</p>
-                <div class="clip-card__meta">
-                  <span>TYPE · Short Movie</span>
-                  <span>ROLE · DOP &amp; Editor</span>
-                </div>
-                <a href="https://youtu.be/9bCe5yrXB8Y?si=UCHf5VCr4E7EqCrQ" class="clip-card__link" target="_blank" rel="noopener">Lihat Project →</a>
-              </div>
-            </article>
-          </div>
-          <button class="reel__arrow reel__arrow--next" type="button" aria-label="Scroll ke kanan" data-scroll="1">
-            <i class="bi bi-chevron-right" aria-hidden="true"></i>
-          </button>
+      <!-- About -->
+      <section id="about" class="about" aria-labelledby="aboutTitle">
+        <div class="section-head">
+          <span class="section-head__tc">00:08:00:00</span>
+          <h2 class="section-head__title" id="aboutTitle">About Me</h2>
         </div>
-      </div>
 
-      <!-- Reel 2: Code -->
-      <div class="reel">
-        <div class="reel__head">
-          <i class="bi bi-code-slash" aria-hidden="true"></i>
-          <h3>Code &amp; Dev Reel</h3>
-          <span class="reel__count">04 builds</span>
+        <div class="clip-notes">
+          <article class="clip-note">
+            <span class="clip-note__tc">00:00:05:12</span>
+            <p>Halo khalayak! Kenalin, aku Vigo Agatho — panggil Vigo buat occasion formal, Pigo atau Pigoy kalau udah deket. Fresh graduate Sistem Informasi Universitas Tanjungpura Pontianak, sekarang ngarah ke software development.</p>
+          </article>
+          <article class="clip-note">
+            <span class="clip-note__tc">00:00:15:08</span>
+            <p>Latar belakangku campur: Premiere Pro, After Effects, motion graphics, sampai short movie. Itu yang bikin aku beda waktu ngurus detail motion, timing, dan rasa visual di UI.</p>
+          </article>
+          <article class="clip-note">
+            <span class="clip-note__tc">00:00:25:19</span>
+            <p>Sisi teknisnya: Flutter jadi rumah utama, web jadi lapangan kedua. Di luar itu aku grinding JRPG dan nonton anime — sumber referensi rasa dan pacing yang sering nyelip ke kerjaan.</p>
+          </article>
         </div>
-        <div class="reel__scroller is-at-start">
-          <button class="reel__arrow reel__arrow--prev" type="button" aria-label="Scroll ke kiri" data-scroll="-1">
-            <i class="bi bi-chevron-left" aria-hidden="true"></i>
-          </button>
-          <div class="clip-grid" tabindex="0" role="region" aria-label="Daftar project code & dev, geser untuk lihat lebih banyak">
-            <article class="clip-card">
-              <a
-                class="clip-card__media"
-                href="https://www.linkedin.com/posts/vigo-agatho-4b51a7257_just-finished-our-final-exam-project-for-activity-7135001892983611393-K5Mv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD812AkBN1DkpLBbxlYkwNHcmZlJdVQVdAo"
-                target="_blank"
-                rel="noopener"
-              >
-                <img src="img/aninext.png" alt="Aninext Mobile App" loading="lazy" />
-                <span class="clip-card__play" aria-hidden="true"><i class="fa fa-external-link"></i></span>
-              </a>
-              <div class="clip-card__body">
-                <h4>Aninext Mobile App</h4>
-                <p>UAS Pemograman Perangkat Bergerak — app mobile streaming terinspirasi dari bStation.</p>
-                <div class="clip-card__meta">
-                  <span>TYPE · Mobile App</span>
-                  <span>STACK · Flutter</span>
-                </div>
+
+        <div class="about__tags">
+          <span class="lower-third__tag">Video Content Creator</span>
+          <span class="lower-third__tag">IT Enthusiast</span>
+          <span class="lower-third__tag">Flutter Developer</span>
+          <span class="lower-third__tag">JRPG Head</span>
+          <span class="lower-third__tag">Anime Enthusiast</span>
+        </div>
+      </section>
+
+      <!-- Work -->
+      <section id="work" class="projects" aria-labelledby="workTitle">
+        <div class="section-head">
+          <span class="section-head__tc">00:16:00:00</span>
+          <h2 class="section-head__title" id="workTitle">Selected Work</h2>
+        </div>
+        <p class="section-intro">The projects—and the work behind the scenes.</p>
+
+        <div class="featured-grid">
+          <article class="featured-card">
+            <button class="featured-card__media" type="button" data-case="repo" aria-label="Buka case study REPO MIPA">
+              <img src="img/Ruang.png" alt="Tampilan platform REPO MIPA" loading="lazy" />
+              <span class="featured-card__badge">Skripsi · Flutter</span>
+              <span class="featured-card__hint">Buka case study</span>
+            </button>
+            <div class="featured-card__body">
+              <h3>REPO MIPA</h3>
+              <p>Platform repositori dokumen tugas akhir untuk fakultas MIPA — proyek skripsi gelar S.Kom.</p>
+              <div class="featured-card__meta">
+                <span>PERAN · Developer &amp; peneliti</span>
+                <span>STACK · Flutter</span>
+              </div>
+              <div class="featured-card__actions">
+                <button class="case-btn" type="button" data-case="repo">Buka case study →</button>
+                <a href="https://youtu.be/vGdwdAQu4QM" class="case-link" target="_blank" rel="noopener">Video demo <i class="fa fa-external-link" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card">
+            <button class="featured-card__media" type="button" data-case="aninext" aria-label="Buka case study Aninext">
+              <img src="img/aninext.png" alt="Tampilan aplikasi Aninext" loading="lazy" />
+              <span class="featured-card__badge">Flutter · Team Project</span>
+              <span class="featured-card__hint">Buka case study</span>
+            </button>
+            <div class="featured-card__body">
+              <h3>Aninext</h3>
+              <p>App mobile streaming anime untuk UAS Pemrograman Perangkat Bergerak, terinspirasi bStation.</p>
+              <div class="featured-card__meta">
+                <span>PERAN · Mobile developer (tim)</span>
+                <span>STACK · Flutter</span>
+              </div>
+              <div class="featured-card__actions">
+                <button class="case-btn" type="button" data-case="aninext">Buka case study →</button>
                 <a
                   href="https://www.linkedin.com/posts/vigo-agatho-4b51a7257_just-finished-our-final-exam-project-for-activity-7135001892983611393-K5Mv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD812AkBN1DkpLBbxlYkwNHcmZlJdVQVdAo"
-                  class="clip-card__link"
+                  class="case-link"
                   target="_blank"
                   rel="noopener"
-                  >Lihat Project →</a
-                >
+                  >Post LinkedIn <i class="fa fa-external-link" aria-hidden="true"></i
+                ></a>
               </div>
-            </article>
+            </div>
+          </article>
+        </div>
 
-            <article class="clip-card">
-              <a class="clip-card__media" href="https://github.com/vigoagatho/mini_project.git" target="_blank" rel="noopener">
-                <img src="img/ruang_baca_bg.png" alt="Ruang Baca" loading="lazy" />
+        <!-- Side builds -->
+        <div class="reel reel--builds">
+          <div class="reel__head">
+            <i class="bi bi-code-slash" aria-hidden="true"></i>
+            <h3>Side Builds</h3>
+          </div>
+          <p class="reel__intro">Proyek kecil di luar tugas kuliah, tempat aku latihan dan nyoba hal baru.</p>
+
+          <div class="build-grid">
+            <article class="clip-card clip-card--compact">
+              <a class="clip-card__media" href="https://github.com/vigoagatho/mini_project.git" target="_blank" rel="noopener" aria-label="Buka repo Ruang Baca">
+                <img src="img/ruang_baca_bg.png" alt="Tampilan Ruang Baca" loading="lazy" />
                 <span class="clip-card__play" aria-hidden="true"><i class="fa fa-external-link"></i></span>
               </a>
               <div class="clip-card__body">
                 <h4>Ruang Baca</h4>
-                <p>E-Library pertama buatanku, dikerjakan fullstack dengan bantuan API open source.</p>
+                <p>E-Library fullstack android app pertamaku, dibangun dengan API open source.</p>
+                <p class="clip-card__learned"><strong>Dipelajari:</strong> alur data dari API sampai tampil di UI.</p>
                 <div class="clip-card__meta">
-                  <span>TYPE · Web App (Fullstack)</span>
-                  <span>CAT · E-Library</span>
+                  <span>TYPE · Mobile Android App (Fullstack)</span>
+                  <span>STACK · Flutter</span>
                 </div>
-                <a href="https://github.com/vigoagatho/mini_project.git" class="clip-card__link" target="_blank" rel="noopener">Lihat Project →</a>
+                <a href="https://github.com/vigoagatho/mini_project.git" class="clip-card__link" target="_blank" rel="noopener">Lihat repo →</a>
               </div>
             </article>
 
-            <article class="clip-card">
-              <a class="clip-card__media" href="https://youtu.be/vGdwdAQu4QM" target="_blank" rel="noopener">
-                <img src="img/Ruang.png" alt="REPO MIPA" loading="lazy" />
-                <span class="clip-card__play" aria-hidden="true"><i class="fa fa-play"></i></span>
-              </a>
-              <div class="clip-card__body">
-                <h4>REPO MIPA</h4>
-                <p>Platform repositori dokumen tugas akhir untuk fakultas MIPA — proyek skripsi gelar S.Kom.</p>
-                <div class="clip-card__meta">
-                  <span>TYPE · Thesis Project</span>
-                  <span>CAT · Document Repository</span>
-                </div>
-                <a href="https://youtu.be/vGdwdAQu4QM" class="clip-card__link" target="_blank" rel="noopener">Lihat Project →</a>
-              </div>
-            </article>
-
-            <article class="clip-card">
-              <a class="clip-card__media" href="https://s.id/qzSAE" target="_blank" rel="noopener">
-                <img src="img/eve_fight.png" alt="Everybody Fighters" loading="lazy" />
+            <article class="clip-card clip-card--compact">
+              <a class="clip-card__media" href="https://s.id/qzSAE" target="_blank" rel="noopener" aria-label="Unduh project Everybody Fighters">
+                <img src="img/eve_fight.png" alt="Tampilan Everybody Fighters" loading="lazy" />
                 <span class="clip-card__play" aria-hidden="true"><i class="fa fa-external-link"></i></span>
               </a>
               <div class="clip-card__body">
                 <h4>Everybody Fighters</h4>
-                <p>Game 2D fighting yang dibangun pakai Ikemen GO, engine fighting game open source. Masih tahap playtest.</p>
+                <p>Game 2D fighting di atas Ikemen GO, masih tahap playtest.</p>
+                <p class="clip-card__learned"><strong>Dipelajari:</strong> sisi visual ketemu teknis, mulai dari sprite, animasi gerakan, sampai timing frame.</p>
                 <div class="clip-card__meta">
                   <span>TYPE · 2D Game</span>
                   <span>ENGINE · Ikemen GO</span>
                 </div>
-                <a href="https://s.id/qzSAE" class="clip-card__link" target="_blank" rel="noopener">Unduh Project →</a>
+                <a href="https://s.id/qzSAE" class="clip-card__link" target="_blank" rel="noopener">Unduh project →</a>
               </div>
             </article>
           </div>
-          <button class="reel__arrow reel__arrow--next" type="button" aria-label="Scroll ke kanan" data-scroll="1">
-            <i class="bi bi-chevron-right" aria-hidden="true"></i>
-          </button>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Off Duty -->
-    <section id="offduty" class="offduty">
-      <div class="section-head">
-        <span class="section-head__tc">00:38:00:00</span>
-        <h2 class="section-head__title">Off Duty</h2>
-      </div>
-      <p class="offduty__intro">Di luar kerjaan, layar ini biasanya nyala buat hal-hal berikut.</p>
+      <!-- Toolbox -->
+      <section id="toolbox" class="toolbox" aria-labelledby="toolboxTitle">
+        <div class="section-head">
+          <span class="section-head__tc">00:30:00:00</span>
+          <h2 class="section-head__title" id="toolboxTitle">Toolbox</h2>
+        </div>
+        <p class="section-intro">Dari yang kupakai tiap hari sampai yang baru kucolek.</p>
 
-      <div class="offduty__grid">
-        <article class="save-panel">
-          <div class="save-panel__head">
-            <i class="bi bi-controller" aria-hidden="true"></i>
-            <span>Save Data — Games</span>
+        <div class="toolbox__grid">
+          <div class="toolbox__group">
+            <h3><span class="toolbox__dot toolbox__dot--daily" aria-hidden="true"></span>Dipakai harian</h3>
+            <ul class="tool-list">
+              <li>Flutter</li>
+              <li>Dart</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
           </div>
-          <ul class="save-panel__list">
-            <li>
-              <span class="save-panel__tag save-panel__tag--live">Playing</span>
-              <span class="save-panel__name">Zenless Zone Zero</span>
-            </li>
-            <li>
-              <span class="save-panel__tag save-panel__tag--live">Playing</span>
-              <span class="save-panel__name">Persona 5: The Phantom X</span>
-            </li>
-            <li>
-              <span class="save-panel__tag save-panel__tag--goat">All-Time GOAT</span>
-              <span class="save-panel__name">Persona 4 Golden</span>
-            </li>
-          </ul>
-        </article>
-
-        <article class="save-panel">
-          <div class="save-panel__head">
-            <i class="bi bi-tv" aria-hidden="true"></i>
-            <span>Watchlist — Anime</span>
+          <div class="toolbox__group">
+            <h3><span class="toolbox__dot toolbox__dot--familiar" aria-hidden="true"></span>Familiar</h3>
+            <ul class="tool-list">
+              <li>React JS</li>
+              <li>Python</li>
+              <li>Git &amp; GitHub</li>
+              <li>After Effects</li>
+              <li>Premiere Pro</li>
+            </ul>
           </div>
-          <ul class="save-panel__list">
-            <li>
-              <span class="save-panel__tag save-panel__tag--pick">Top Pick</span>
-              <span class="save-panel__name">Bleach</span>
-            </li>
-            <li>
-              <span class="save-panel__tag save-panel__tag--pick">Top Pick</span>
-              <span class="save-panel__name">Fullmetal Alchemist: Brotherhood</span>
-            </li>
-            <li>
-              <span class="save-panel__tag save-panel__tag--pick">Top Pick</span>
-              <span class="save-panel__name">Frieren: Beyond Journey's End</span>
-            </li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contacts" class="contacts">
-      <div class="section-head">
-        <span class="section-head__tc">00:50:00:00</span>
-        <h2 class="section-head__title">Find Me On</h2>
-      </div>
-
-      <div class="export-panel">
-        <div class="export-panel__row">
-          <span class="export-panel__label">Status</span>
-          <span class="export-panel__value">Open to opportunities</span>
+          <div class="toolbox__group">
+            <h3><span class="toolbox__dot toolbox__dot--tried" aria-hidden="true"></span>Pernah explore</h3>
+            <ul class="tool-list">
+              <li>Ikemen GO</li>
+              <li>ElysiaJS</li>
+            </ul>
+          </div>
+          <div class="toolbox__group">
+            <h3><span class="toolbox__dot toolbox__dot--learning" aria-hidden="true"></span>Lagi dipelajari</h3>
+            <ul class="tool-list">
+              <li>React ecosystem</li>
+              <li>AI-augmented workflow</li>
+            </ul>
+          </div>
         </div>
-        <div class="export-panel__row">
-          <span class="export-panel__label">Base</span>
-          <span class="export-panel__value">Pontianak, Kalimantan Barat</span>
-        </div>
-        <div class="export-panel__divider"></div>
+      </section>
 
-        <div class="social-list">
-          <a href="https://www.facebook.com/kristian.agatho" class="social-list__item" target="_blank" rel="noopener">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <span>Facebook</span>
-            <i class="fa fa-external-link social-list__arrow" aria-hidden="true"></i>
+      <!-- Visual Side -->
+      <section id="visual" class="visual" aria-labelledby="visualTitle">
+        <div class="section-head">
+          <span class="section-head__tc">00:36:00:00</span>
+          <h2 class="section-head__title" id="visualTitle">Visual Side</h2>
+        </div>
+        <p class="section-intro">Bekal dari dunia video dan animasi: timing, motion, dan rasa visual. Ini yang kebawa ke kerjaan code.</p>
+
+        <div class="visual-grid">
+          <a class="visual-tile" href="https://www.instagram.com/p/CKBdX7fr-hW/" target="_blank" rel="noopener">
+            <img src="img/2d infest.jpg" alt="2D Motion Graphics" loading="lazy" />
+            <span class="visual-tile__overlay">
+              <span class="visual-tile__type">Motion Graphics</span>
+              <span class="visual-tile__title">2D Motion Graphics</span>
+              <span class="visual-tile__role">After Effects</span>
+            </span>
           </a>
-          <a href="https://www.youtube.com/@bukanvigo" class="social-list__item" target="_blank" rel="noopener">
-            <i class="fa fa-youtube" aria-hidden="true"></i>
-            <span>YouTube</span>
-            <i class="fa fa-external-link social-list__arrow" aria-hidden="true"></i>
+          <a class="visual-tile" href="https://www.instagram.com/p/CMw6aYQr-vu/" target="_blank" rel="noopener">
+            <img src="img/2d evan.jpg" alt="2D Puppet Animation" loading="lazy" />
+            <span class="visual-tile__overlay">
+              <span class="visual-tile__type">Character Animation</span>
+              <span class="visual-tile__title">2D Puppet Animation</span>
+              <span class="visual-tile__role">HPDD Infest Untan</span>
+            </span>
           </a>
-          <a href="https://www.instagram.com/oohvigo/" class="social-list__item" target="_blank" rel="noopener">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-            <span>Instagram</span>
-            <i class="fa fa-external-link social-list__arrow" aria-hidden="true"></i>
+          <a class="visual-tile" href="https://www.youtube.com/watch?v=xrs8WkFEuxc" target="_blank" rel="noopener">
+            <img src="img/ad cleo.jpg" alt="Duta Muda Cleo 2021" loading="lazy" />
+            <span class="visual-tile__overlay">
+              <span class="visual-tile__type">TVC / Ad Video</span>
+              <span class="visual-tile__title">Duta Muda Cleo 2021</span>
+              <span class="visual-tile__role">DOP &amp; Editor</span>
+            </span>
+          </a>
+          <a class="visual-tile" href="https://youtu.be/9bCe5yrXB8Y?si=UCHf5VCr4E7EqCrQ" target="_blank" rel="noopener">
+            <img src="img/menyadik.jpg" alt="Menyadik Short Movie" loading="lazy" />
+            <span class="visual-tile__overlay">
+              <span class="visual-tile__type">Short Movie</span>
+              <span class="visual-tile__title">Menyadik</span>
+              <span class="visual-tile__role">DOP &amp; Editor</span>
+            </span>
           </a>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Off Duty -->
+      <section id="offduty" class="offduty" aria-labelledby="offdutyTitle">
+        <div class="section-head">
+          <span class="section-head__tc">00:42:00:00</span>
+          <h2 class="section-head__title" id="offdutyTitle">Off Duty</h2>
+        </div>
+        <p class="offduty__intro">Di luar kerjaan, layar ini biasanya nyala buat hal-hal berikut.</p>
+
+        <div class="offduty__grid">
+          <article class="save-panel">
+            <div class="save-panel__head">
+              <i class="bi bi-controller" aria-hidden="true"></i>
+              <span>Save Data — Games</span>
+            </div>
+            <ul class="save-panel__list">
+              <li>
+                <span class="save-panel__tag save-panel__tag--live">Playing</span>
+                <span class="save-panel__name">Zenless Zone Zero</span>
+              </li>
+              <li>
+                <span class="save-panel__tag save-panel__tag--live">Playing</span>
+                <span class="save-panel__name">Persona 5: The Phantom X</span>
+              </li>
+              <li>
+                <span class="save-panel__tag save-panel__tag--goat">All-Time GOAT</span>
+                <span class="save-panel__name">Persona 4 Golden</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="save-panel">
+            <div class="save-panel__head">
+              <i class="bi bi-tv" aria-hidden="true"></i>
+              <span>Watchlist — Anime</span>
+            </div>
+            <ul class="save-panel__list">
+              <li>
+                <span class="save-panel__tag save-panel__tag--pick">Top Pick</span>
+                <span class="save-panel__name">Bleach</span>
+              </li>
+              <li>
+                <span class="save-panel__tag save-panel__tag--pick">Top Pick</span>
+                <span class="save-panel__name">Fullmetal Alchemist: Brotherhood</span>
+              </li>
+              <li>
+                <span class="save-panel__tag save-panel__tag--pick">Top Pick</span>
+                <span class="save-panel__name">Frieren: Beyond Journey's End</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contacts" class="contacts" aria-labelledby="contactsTitle">
+        <div class="section-head">
+          <span class="section-head__tc">00:50:00:00</span>
+          <h2 class="section-head__title" id="contactsTitle">Find Me On</h2>
+        </div>
+
+        <div class="export-panel">
+          <div class="export-panel__row">
+            <span class="export-panel__label">Status</span>
+            <span class="export-panel__value">Open to opportunities</span>
+          </div>
+          <div class="export-panel__row">
+            <span class="export-panel__label">Base</span>
+            <span class="export-panel__value">Sanggau, Kalimantan Barat</span>
+          </div>
+          <div class="export-panel__divider"></div>
+
+          <div class="contact-primary">
+            <a href="mailto:vigospanda@gmail.com" class="contact-row">
+              <i class="bi bi-envelope" aria-hidden="true"></i>
+              <span class="contact-row__label">Email</span>
+              <span class="contact-row__value contact-row__value--draft">vigospanda@gmail.com</span>
+              <i class="bi bi-arrow-up-right contact-row__arrow" aria-hidden="true"></i>
+            </a>
+            <a href="https://github.com/vigoagatho" class="contact-row" target="_blank" rel="noopener">
+              <i class="bi bi-github" aria-hidden="true"></i>
+              <span class="contact-row__label">GitHub</span>
+              <span class="contact-row__value">vigoagatho</span>
+              <i class="bi bi-arrow-up-right contact-row__arrow" aria-hidden="true"></i>
+            </a>
+            <!-- <span class="contact-row contact-row--todo">
+              <i class="bi bi-file-earmark-text" aria-hidden="true"></i>
+              <span class="contact-row__label">CV</span>
+              <span class="contact-row__value contact-row__value--draft">belum diunggah</span>
+              <i class="bi bi-lock contact-row__arrow" aria-hidden="true"></i>
+            </span> -->
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://www.instagram.com/oohvigo/" class="social-chip" target="_blank" rel="noopener"><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</a>
+            <a href="https://www.youtube.com/@bukanvigo" class="social-chip" target="_blank" rel="noopener"><i class="fa fa-youtube" aria-hidden="true"></i>YouTube</a>
+            <a href="https://www.facebook.com/kristian.agatho" class="social-chip" target="_blank" rel="noopener"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="site-footer">
-      <p>© <span id="year"></span> Vigo Agatho</p>
+      <p>© <span id="year"></span> Vigo Agatho <span class="site-footer__end">— END OF REEL —</span></p>
+      <a href="#home" class="site-footer__top">↑ Back to start</a>
     </footer>
+
+    <!-- Case study: REPO MIPA -->
+    <dialog class="case-study" id="case-repo" aria-labelledby="case-repo-title">
+      <div class="case-study__inner">
+        <button class="case-study__close" type="button" data-close aria-label="Tutup case study"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+        <p class="case-study__kicker">Case Study · Skripsi · 00:16:12:04</p>
+        <h2 class="case-study__title" id="case-repo-title">REPO MIPA</h2>
+        <p class="case-study__lede">Platform repositori dokumen tugas akhir untuk fakultas MIPA.</p>
+
+        <dl class="case-study__facts">
+          <div>
+            <dt>Peran</dt>
+            <dd>Developer &amp; peneliti</dd>
+          </div>
+          <div>
+            <dt>Stack</dt>
+            <dd>Flutter · Dart</dd>
+          </div>
+          <div>
+            <dt>Konteks</dt>
+            <dd>Skripsi S.Kom</dd>
+          </div>
+        </dl>
+
+        <h3>Masalah</h3>
+        <p>Dokumen tugas akhir mahasiswa MIPA tersebar dan susah diakses ulang.</p>
+
+        <h3>Yang aku kerjain</h3>
+        <p>Merancang aplikasi repositori dan membangun platform mobile untuk mencari, dan akses dokumen tugas akhir — sekaligus menyusun penelitian skripsi di baliknya.</p>
+
+        <h3>Hasil</h3>
+        <p>Jadi proyek skripsi S.Kom dan didemokan lewat video; alur aplikasi berjalan mulus dari ujung ke ujung.</p>
+
+        <div class="case-study__actions">
+          <a href="https://youtu.be/vGdwdAQu4QM" class="btn btn--primary" target="_blank" rel="noopener">Lihat video demo</a>
+          <button class="btn btn--ghost" type="button" data-close>Tutup</button>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Case study: Aninext -->
+    <dialog class="case-study" id="case-aninext" aria-labelledby="case-aninext-title">
+      <div class="case-study__inner">
+        <button class="case-study__close" type="button" data-close aria-label="Tutup case study"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+        <p class="case-study__kicker">Case Study · UAS · 00:16:28:16</p>
+        <h2 class="case-study__title" id="case-aninext-title">Aninext</h2>
+        <p class="case-study__lede">App mobile streaming anime yang terinspirasi bStation.</p>
+
+        <dl class="case-study__facts">
+          <div>
+            <dt>Peran</dt>
+            <dd>Mobile developer (tim)</dd>
+          </div>
+          <div>
+            <dt>Stack</dt>
+            <dd>Flutter · Dart</dd>
+          </div>
+          <div>
+            <dt>Konteks</dt>
+            <dd>UAS Pemrograman Perangkat Bergerak</dd>
+          </div>
+        </dl>
+
+        <h3>Masalah</h3>
+        <p>Butuh app streaming anime yang jalan di mobile untuk tugas besar mata kuliah Pemrograman Perangkat Bergerak.</p>
+
+        <h3>Yang aku kerjain</h3>
+        <p>Bangun app mobile Flutter bergaya platform streaming — katalog, detail tontonan, dan alur nonton — bareng tim UAS.</p>
+
+        <h3>Hasil</h3>
+        <p>Selesai dan didemokan; dokumentasinya dibagikan sebagai portofolio di LinkedIn.</p>
+
+        <div class="case-study__actions">
+          <a
+            href="https://www.linkedin.com/posts/vigo-agatho-4b51a7257_just-finished-our-final-exam-project-for-activity-7135001892983611393-K5Mv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD812AkBN1DkpLBbxlYkwNHcmZlJdVQVdAo"
+            class="btn btn--primary"
+            target="_blank"
+            rel="noopener"
+            >Lihat post LinkedIn</a
+          >
+          <button class="btn btn--ghost" type="button" data-close>Tutup</button>
+        </div>
+      </div>
+    </dialog>
 
     <script src="script.js"></script>
   </body>
